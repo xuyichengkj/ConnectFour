@@ -1,0 +1,24 @@
+.grid {
+  margin: auto;
+}
+
+.grid {
+  margin: auto;
+  width: 900px;
+  height: 800px;
+}
+.grid tr {
+  margin: auto;
+}
+.grid td {
+  margin: auto;
+  background-color: blue;
+  border: solid black;
+}
+.circle {
+  margin: auto;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+}

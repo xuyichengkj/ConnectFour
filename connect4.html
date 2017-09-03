@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ConnectFour</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="board.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <!-- <div class="container"> -->
+        <h1 class="display-5">Welcome to Connect Four Game!</h1>
+        <p></p>
+        <hr class="my-2">
+
+        <!-- Rules and Introduction -->
+        <div id="accordion" role="tablist">
+          <div class="card">
+            <div class="card-header" role="tab" id="headingOne">
+              <h5 class="mb-0">
+                <a class="collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  Introduction
+                </a>
+              </h5>
+            </div>
+            <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <p><strong>Connect Four</strong> (also known as Captain's Mistress, Four Up, Plot Four, Find Four,
+                  Fourplay[citation needed], Four in a Row, Four in a Line and Gravitrips (in Soviet Union)) is a two-player
+                  connection game in which the players first choose a color and then take turns dropping colored discs from the
+                  top into a seven-column, six-row vertically suspended grid.
+                </p>
+                <p>The game was first sold under the Connect Four trademark by Milton Bradley in February 1974.</p>
+                <p> Learn more on <a href="https://en.wikipedia.org/wiki/Connect_Four">wiki page</a> </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" role="tab" id="headingTwo">
+              <h5 class="mb-0">
+                <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Rules
+                </a>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+                  Object: Connect four of your checkers vertically, horizontally or diagonally in a row while preventing your opponent from doing the same.
+                  <ul>
+                    <li>The game grid is 6 rows x 7 columns</li>
+                    <li>Choose one color for your discs</li>
+                    <li>Take turn dropping discs from top of one column</li>
+                    <li>The pieces fall straight down, occupying the next available space within the column</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of Rules and Introductions -->
+      </div>
+
+      <!-- Restart Btn -->
+      <p class="lead mt-3">
+        <a class="btn btn-primary btn-lg disabled" id="rstBtn" href="#" role="button">Restart Game</a>
+      </p>
+      <!-- End of rst Btn -->
+
+      <!-- Game Table -->
+      <table class = "grid">
+        <tr id = "row1">
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+        </tr>
+        <tr id = "row2">
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+        </tr>
+        <tr id = "row3">
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+        </tr>
+        <tr id = "row4">
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+        </tr>
+        <tr id = "row5">
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+        </tr>
+        <tr id = "row6">
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+          <td><p class="circle"></p></td>
+        </tr>
+      </table>
+    </div>
+
+
+
+
+    <!-- Link jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous">
+    </script>
+    <!-- End jQuery -->
+    <!-- Link bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS End -->
+    <script src="connect_four.js"></script>
+  </body>
+</html>
